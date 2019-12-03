@@ -1,0 +1,9 @@
+2019-11-18.15:00:11 ERROR [main] com.niit.web.blog.service.impl.ArticleServiceImpl.listAuthorArticle:44 查询登录用户文章信息异常
+2019-11-18.15:01:00 ERROR [main] com.niit.web.blog.service.impl.ArticleServiceImpl.listAuthorArticle:44 查询登录用户文章信息异常
+2019-11-18.15:05:51 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:72 连接失败
+2019-11-18.15:23:57 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:74 文章获取失败
+2019-11-18.15:28:40 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:74 文章获取失败
+2019-11-18.15:31:41 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:75 文章获取失败
+2019-11-18.15:36:43 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:74 文章获取失败
+2019-11-18.15:44:43 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:74 文章获取失败
+2019-11-18.15:55:26 ERROR [main] com.niit.web.blog.util.JSoupSpider.lambda$getArticles$1:74 文章获取失败
