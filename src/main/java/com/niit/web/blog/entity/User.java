@@ -3,12 +3,11 @@ package com.niit.web.blog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName User
  * @Description 用户实体类
  * @Date 9:47 2019/11/9

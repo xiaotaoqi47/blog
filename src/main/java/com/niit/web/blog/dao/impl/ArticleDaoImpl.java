@@ -5,10 +5,8 @@ import com.niit.web.blog.domain.vo.ArticleVo;
 import com.niit.web.blog.entity.Article;
 import com.niit.web.blog.util.BeanHandler;
 import com.niit.web.blog.util.DbUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,7 +14,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName ArticleDaoImpl
  * @Description 文章Dao接口实现类
  * @Date 2019/11/10
@@ -24,7 +22,6 @@ import java.util.List;
  **/
 public class ArticleDaoImpl implements ArticleDao {
     private static Logger logger = LoggerFactory.getLogger(ArticleDaoImpl.class);
-
 
     @Override
     public void batchInsert(List<Article> articleList) throws SQLException {
@@ -91,7 +88,6 @@ public class ArticleDaoImpl implements ArticleDao {
         DbUtil.close(connection, pst, rs);
         return articleVos;
     }
-
 
     @Override
     public List<ArticleVo> selectByKeywords(String keywords) throws SQLException {

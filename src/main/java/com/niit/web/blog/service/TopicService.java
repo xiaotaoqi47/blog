@@ -3,7 +3,7 @@ package com.niit.web.blog.service;
 import com.niit.web.blog.util.Result;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName TopicService
  * @Description TODO
  * @Date 20:07 2019/11/16

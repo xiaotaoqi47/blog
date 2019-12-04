@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.Properties;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName DbUtil
  * @Description 数据库连接工具类
  * @Date 2019/11/10

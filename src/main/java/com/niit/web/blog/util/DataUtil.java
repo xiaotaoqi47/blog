@@ -6,7 +6,6 @@ import com.niit.web.blog.factory.DaoFactory;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,7 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName StingUtil
  * @Description 模拟构造用户数据的工具类
  * @Date 2019/11/9

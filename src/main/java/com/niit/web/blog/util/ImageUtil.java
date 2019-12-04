@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName VerifyCode
  * @Description 验证码生成
  * @Date 2019/11/18

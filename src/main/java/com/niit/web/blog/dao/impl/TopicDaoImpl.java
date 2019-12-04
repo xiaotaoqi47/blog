@@ -1,16 +1,13 @@
 package com.niit.web.blog.dao.impl;
 
 import com.niit.web.blog.dao.TopicDao;
-
 import com.niit.web.blog.domain.vo.TopicVo;
 import com.niit.web.blog.entity.Topic;
 import com.niit.web.blog.entity.User;
 import com.niit.web.blog.util.BeanHandler;
 import com.niit.web.blog.util.DbUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName TopicDaoImpl
  * @Description 专题Dao接口实现类
  * @Date 2019/11/16

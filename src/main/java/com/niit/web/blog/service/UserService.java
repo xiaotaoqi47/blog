@@ -3,9 +3,8 @@ package com.niit.web.blog.service;
 import com.niit.web.blog.domain.dto.UserDto;
 import com.niit.web.blog.util.Result;
 
-
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName UserService
  * @Description 用户业务逻辑接口
  * @Date 12:01 2019/11/9

@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @ClassName SimpleUser
  * @Description 简单的用户类，id、头像、昵称
- * @Author mq_xu
+ * @Author xiaotaoqi
  * @Date 2019/11/23
  **/
 @Data

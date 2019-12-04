@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName StringUtil
  * @Description 字符串工具类
  * @Date 0:07 2019/11/14

@@ -2,12 +2,11 @@ package com.niit.web.blog.dao;
 
 import com.niit.web.blog.domain.vo.TopicVo;
 import com.niit.web.blog.entity.Topic;
-
 import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName TopicDao
  * @Description TODO
  * @Date 2019/11/14

@@ -7,21 +7,17 @@ import com.niit.web.blog.dao.UserDao;
 import com.niit.web.blog.domain.dto.UserDto;
 import com.niit.web.blog.domain.vo.ArticleVo;
 import com.niit.web.blog.domain.vo.UserVo;
-import com.niit.web.blog.entity.User;
 import com.niit.web.blog.factory.DaoFactory;
 import com.niit.web.blog.service.UserService;
-import com.niit.web.blog.util.Result;
-import com.niit.web.blog.util.ResultCode;
 import com.niit.web.blog.util.ResultCode;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName UserServiceImpl
  * @Description 用户业务逻辑接口实现类
  * @Date 2019/11/9

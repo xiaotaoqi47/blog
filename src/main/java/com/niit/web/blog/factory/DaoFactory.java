@@ -11,7 +11,7 @@ import com.niit.web.blog.dao.impl.UserDaoImpl;
 
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName DaoFactory
  * @Description Dao工厂类
  * @Date 2019/11/6

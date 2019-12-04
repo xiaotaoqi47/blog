@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @ClassName Region
  * @Description  全国省市区地址Region实体类
- * @Author mq_xu
+ * @Author  xiaotaoqi
  * @Date 2019/11/23
  **/
 @Data

@@ -5,16 +5,14 @@ import com.niit.web.blog.dao.ArticleDao;
 import com.niit.web.blog.domain.vo.ArticleVo;
 import com.niit.web.blog.factory.DaoFactory;
 import com.niit.web.blog.service.ArticleService;
-import com.niit.web.blog.util.Result;
 import com.niit.web.blog.util.ResultCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName ArticleServiceImpl
  * @Description TODO
  * @Date 22:49 2019/11/11

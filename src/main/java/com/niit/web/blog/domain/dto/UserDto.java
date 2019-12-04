@@ -1,11 +1,10 @@
 package com.niit.web.blog.domain.dto;
 
 import lombok.Data;
-
 import java.io.Serializable;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName UserDto
  * @Description 用户传输对象
  * @Date 2019/11/9

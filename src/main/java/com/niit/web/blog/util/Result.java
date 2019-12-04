@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName Result
  * @Description 返回给客户端的结果对象
  * @Date 2019/11/16

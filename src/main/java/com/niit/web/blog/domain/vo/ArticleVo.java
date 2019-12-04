@@ -7,7 +7,7 @@ import com.niit.web.blog.entity.User;
 import lombok.Data;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName ArticleVo
  * @Description 文章视图类, 从文章、专题、用户表联查出前端需要展示的数据
  * @Date 2019/11/11

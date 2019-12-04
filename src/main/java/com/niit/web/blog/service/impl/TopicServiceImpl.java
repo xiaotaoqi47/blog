@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author xiaotaoqi
  * @ClassName TopicServiceImpl
  * @Description TODO
  * @Date 2019/11/16

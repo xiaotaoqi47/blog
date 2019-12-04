@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @ClassName SimpleTopic
  * @Description 简单的专题类，id、logo、名称
- * @Author mq_xu
+ * @Author xiaotaoqi
  * @Date 2019/11/23
  **/
 @Data

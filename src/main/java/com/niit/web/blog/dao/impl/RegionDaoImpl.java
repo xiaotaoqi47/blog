@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @ClassName RegionDaoImpl
  * @Description TODO
- * @Author mq_xu
+ * @Author xiaotaoqi
  * @Date 2019/11/23
  **/
 public class RegionDaoImpl implements  RegionDao {
