@@ -1,1 +1,1 @@
-2019-11-18.14:55:27 ERROR [main] com.niit.web.blog.service.impl.ArticleServiceImpl.listAuthorArticle:44 查询登录用户文章信息异常
+2019-11-18.14:55:27 ERROR [main] ArticleServiceImpl.listAuthorArticle:44 查询登录用户文章信息异常

@@ -1,2 +1,2 @@
-2019-11-16.22:27:56 INFO  [main] com.niit.web.blog.dao.UserDaoTest.batchInsert:22 数据添加成功
-2019-11-16.22:34:16 INFO  [main] com.niit.web.blog.dao.UserDaoTest.batchInsert:22 数据添加成功
+2019-11-16.22:27:56 INFO  [main] UserDaoTest.batchInsert:22 数据添加成功
+2019-11-16.22:34:16 INFO  [main] UserDaoTest.batchInsert:22 数据添加成功
