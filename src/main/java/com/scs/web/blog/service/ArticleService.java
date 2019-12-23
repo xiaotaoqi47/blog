@@ -1,10 +1,11 @@
 package com.scs.web.blog.service;
 
-import com.scs.web.blog.entity.Article;
 import com.scs.web.blog.util.Result;
 
+import java.sql.SQLException;
+
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName ArticleService
  * @Description 文章服务层接口
  * @Date 2019/11/11
@@ -17,7 +18,7 @@ public interface ArticleService {
      * @return
      */
     Result getHotArticles();
-    Result batchDelete(long id);
+
     /**
      * 获取分页文章
      *
@@ -45,10 +46,42 @@ public interface ArticleService {
     Result selectByKeywords(String keywords);
 
     /**
-     * 发布文章
-     *
-     * @param
+     * 添加喜欢
+     * @param article_id
+     * @param user_id
      * @return
      */
-    Result Write(Article article);
+    Result addByArticleAndUser(long article_id, long user_id);
+
+    /**
+     * 取消喜欢
+     * @param article_id
+     * @param user_id
+     * @return
+     */
+    Result deleteByArticleAndUser(long article_id, long user_id);
+
+    /***
+     * 查询是否喜欢
+     * @param article_id
+     * @param user_id
+     * @return
+     */
+    Result selectByArticleAndUser(long article_id, long user_id) ;
+
+    /**
+     *
+     * @param userId
+     * @param topicId
+     * @param title
+     * @param summary
+     * @param thumbnail
+     * @param content
+     */
+    void addArticle(int userId, int topicId, String title, String summary, String thumbnail, String content);
+
+
+
+
+    Result deleteArticle(Long article, long userid) throws SQLException;
 }

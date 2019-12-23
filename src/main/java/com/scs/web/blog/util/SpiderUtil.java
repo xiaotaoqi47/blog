@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName JSoupSpider
  * @Description JSoup爬虫，抓取数据
  * @Date 2019/11/7
@@ -28,7 +28,6 @@ public class SpiderUtil {
     private static Logger logger = LoggerFactory.getLogger(SpiderUtil.class);
 
     private static final int PAGE_COUNT = 1;
-    private static Text text = new Text();
 
     /**
      * 爬取简书网热门作者数据
@@ -109,7 +108,7 @@ public class SpiderUtil {
                 assert document1 != null;
                 Element articleElement = document1.getElementsByClass("_2rhmJa").get(0);
                 Article article = new Article();
-                article.setContent(Text.StripHT(articleElement.html()));
+                article.setContent(articleElement.html());
                 Elements elements = div.children();
                 Element linkElement = elements.get(0);
                 Element divElement = elements.get(1);

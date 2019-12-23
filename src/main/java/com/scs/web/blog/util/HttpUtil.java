@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 /**
  * @ClassName IoUtil
  * @Description IO工具类
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/27
  **/
 public class HttpUtil {

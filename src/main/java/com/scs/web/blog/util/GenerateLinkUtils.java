@@ -9,7 +9,7 @@ import java.util.UUID;
 /**
  * @ClassName GenerateLinkUtils
  * @Description TODO
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/26
  **/
 public class GenerateLinkUtils {

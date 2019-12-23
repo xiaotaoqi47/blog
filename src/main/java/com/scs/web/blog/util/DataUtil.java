@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName StingUtil
  * @Description 模拟构造用户数据的工具类
  * @Date 2019/11/9

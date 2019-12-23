@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * @ClassName LoginController
  * @Description TODO
- * @Autho xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/20
  **/
 @WebServlet(urlPatterns = "/api/login")
@@ -31,6 +31,7 @@ public class LoginController extends HttpServlet {
         MySessionContext myc = MySessionContext.getInstance();
         HttpSession session = myc.getSession(sessionId);
         String correctCode = session.getAttribute("code").toString();
+        System.out.println(session.getId());
         if(code.equalsIgnoreCase(correctCode)){
             resp.getWriter().write("登录成功");
         }else {

@@ -1,9 +1,11 @@
 package com.scs.web.blog.util;
 
+import com.scs.web.blog.domain.dto.CommentDto;
 import com.scs.web.blog.domain.vo.ArticleVo;
 import com.scs.web.blog.entity.Article;
 import com.scs.web.blog.entity.Topic;
 import com.scs.web.blog.entity.User;
+import com.scs.web.blog.entity.UserFollow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,12 +17,29 @@ import java.util.List;
 /**
  * @ClassName BeanHandler
  * @Description 结果集和实体类的转换工具
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/23
  **/
 public class BeanHandler {
     private static Logger logger = LoggerFactory.getLogger(BeanHandler.class);
 
+
+    public static List<CommentDto> converComment(ResultSet rs){
+        List<CommentDto> list = new ArrayList<>();
+        try{
+            while(rs.next()){
+                CommentDto comment = new CommentDto();
+                comment.setId(rs.getLong("t_comment.id"));
+                comment.setComment(rs.getString("t_comment.content"));
+                comment.setName(rs.getString("t_user.nickname"));
+                list.add(comment);
+            }
+        }catch (SQLException e){
+            logger.error("评论数据结果集解析产生异常");
+        }
+        return list;
+
+    }
     public static List<User> convertUser(ResultSet rs) {
         List<User> userList = new ArrayList<>();
         try {
@@ -113,5 +132,9 @@ public class BeanHandler {
             logger.error("文章数据结果集解析异常");
         }
         return articleVoList;
+    }
+
+    public static List<UserFollow> convertUserFollow(ResultSet rs) {
+        return null;
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @ClassName FollowDao
  * @Description FollowDao
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/29
  **/
 public interface FollowDao {
@@ -38,4 +38,11 @@ public interface FollowDao {
      * @throws SQLException
      */
     List<Topic> getTopicFollows(long topicId) throws SQLException;
+
+    int unfollow(long fromId, long toId);
+
+    int follow(long fromId, long toId);
+
+    boolean isFollow(long fromId, long toId);
+
 }

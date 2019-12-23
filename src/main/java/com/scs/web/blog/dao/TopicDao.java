@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName TopicDao
  * @Description TODO
  * @Date 2019/11/14
@@ -64,4 +64,5 @@ public interface TopicDao {
      */
     List<Topic> selectByKeywords(String keywords) throws SQLException;
 
+    List<Topic> getTopicList();
 }

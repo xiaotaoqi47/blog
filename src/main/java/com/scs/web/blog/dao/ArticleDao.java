@@ -7,22 +7,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName ArticleDao
  * @Description 文章Dao接口
  * @Date 7:11 2019/11/10
  * @Version 1.0
  **/
 public interface ArticleDao {
-    /**
-     * 新增用户
-     *
-     * @param article
-     * @throws SQLException
-     * @return
-     */
-    int insert(Article article) throws SQLException;
-    int batchDelete(long id) throws SQLException;
     /**
      * 批量新增文章
      *
@@ -88,5 +79,27 @@ public interface ArticleDao {
      */
     ArticleVo getArticle(long id) throws SQLException;
 
+    /**
+     *
+     * @param userId
+     * @param topicId
+     * @param title
+     * @param summary
+     * @param thumbnail
+     * @param content
+     */
+    void addArticle(int userId, int topicId, String title, String summary, String thumbnail, String content);
+
+
+    /**
+     *
+     * @param article
+     * @param userid
+     * @return
+     * @throws SQLException
+     */
+    boolean deleteArticle(long article, long userid) throws SQLException;
+
 
 }
+

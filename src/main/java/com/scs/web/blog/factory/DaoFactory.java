@@ -4,7 +4,7 @@ import com.scs.web.blog.dao.*;
 import com.scs.web.blog.dao.impl.*;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName DaoFactory
  * @Description Dao工厂类
  * @Date 2019/11/6
@@ -28,6 +28,10 @@ public class DaoFactory {
         return new RegionDaoImpl();
     }
 
-    public static ArticleAddDao getArticleAddDaoInstance(){ return new ArticleAddDaoImpl(); }
+    public static LikeDao getLikeDaoInstance(){ return new LikeDaoimpl(); }
+
+    public static CommentDao getCommentDaoInstance(){return  new CommentDaoimpl();}
+
+    public  static TopicFollowDao getTopicFollowDaoInstance(){return  new TopicFollowDaoImpl();}
 
 }

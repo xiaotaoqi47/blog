@@ -7,7 +7,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName TopicVo
  * @Description 专题视图类, 包含专题自身信息、管理员信息、专题下所有文章、关注者列表
  * @Date 2019/11/16

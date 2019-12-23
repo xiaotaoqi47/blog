@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * @ClassName UserFollow
  * @Description 关注用户实体
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/29
  **/
 @Data

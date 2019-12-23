@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName CodeController
  * @Description 验证码请求接口
  * @Date 2019/11/14

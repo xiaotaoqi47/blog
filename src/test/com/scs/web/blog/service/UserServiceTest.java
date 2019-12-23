@@ -19,12 +19,14 @@ public class UserServiceTest {
 
     @Test
     public void getHotUsers() {
-        Result result = userService.getHotUsers();
+        Result result = (Result) userService.getHotUsers();
         System.out.println(result);
     }
 
     @Test
     public void checkMobile() {
+        Result result = userService.checkMobile("13951905172");
+        System.out.println(result);
     }
 
     @Test

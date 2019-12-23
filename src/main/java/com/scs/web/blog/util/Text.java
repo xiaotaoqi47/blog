@@ -1,5 +1,6 @@
 package com.scs.web.blog.util;
 
+
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author xiaotaoqi
+ * @author yujie_zhao
  * @ClassName Text1
  * @Description TODO
  * @Date 2019/12/9

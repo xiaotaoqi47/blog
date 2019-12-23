@@ -1,5 +1,8 @@
 package com.scs.web.blog.controller;
 
+import com.scs.web.blog.util.HttpUtil;
+import com.scs.web.blog.util.Result;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +15,7 @@ import java.io.IOException;
 /**
  * @ClassName UploadController
  * @Description 上传图片控制器
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/20
  **/
 @MultipartConfig(maxFileSize = 1024 * 1024 * 50)
@@ -25,12 +28,8 @@ public class UploadController extends HttpServlet {
         System.out.println(name);
         String path = req.getSession().getServletContext().getRealPath("");
         System.out.println(path);
-        //f:\\blog\\target\\blog\\1.jpg
         part.write(path + name);
+        HttpUtil.getResponseBody(resp, new Result(0, "http://localhost:9091/" + name));
         System.out.println(path + name);
-        resp.setContentType("image/jpg");
-        req.setAttribute("msg", "上传成功！");
-        req.setAttribute("url", "http://localhost:8080/" + name);
-        req.getRequestDispatcher("/upload.jsp").forward(req, resp);
     }
 }

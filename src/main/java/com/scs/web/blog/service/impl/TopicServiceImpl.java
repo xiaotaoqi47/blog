@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName TopicServiceImpl
  * @Description TODO
  * @Date 2019/11/16
@@ -95,4 +95,11 @@ public class TopicServiceImpl implements TopicService {
             return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
         }
     }
+
+    @Override
+    public List<Topic> getTopicList() {
+        List<Topic> topicList = topicDao.getTopicList();
+        return topicList;
+    }
+
 }

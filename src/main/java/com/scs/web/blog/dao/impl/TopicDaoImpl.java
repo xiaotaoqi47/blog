@@ -13,10 +13,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName TopicDaoImpl
  * @Description 专题Dao接口实现类
  * @Date 2019/11/16
@@ -139,6 +140,21 @@ public class TopicDaoImpl implements TopicDao {
         List<Topic> topicList = BeanHandler.convertTopic(rs);
         DbUtil.close(connection, pst, rs);
         return topicList;
+    }
+
+    @Override
+    public List<Topic> getTopicList() {
+        Connection connection = DbUtil.getConnection();
+        String sql = "select * from t_topic ;";
+        try {
+            PreparedStatement pst = connection.prepareStatement(sql);
+            ResultSet resultSet = pst.executeQuery();
+            List<Topic> topics = BeanHandler.convertTopic(resultSet);
+            return topics;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return new ArrayList<>();
     }
 
 

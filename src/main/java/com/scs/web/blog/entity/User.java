@@ -3,12 +3,13 @@ package com.scs.web.blog.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName User
  * @Description 用户实体类
  * @Date 9:47 2019/11/9
@@ -17,6 +18,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class User {
     private Long id;
     private String mobile;

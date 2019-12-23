@@ -1,8 +1,8 @@
 package com.scs.web.blog.service.impl;
 
 import com.scs.web.blog.dao.ArticleDao;
+import com.scs.web.blog.dao.LikeDao;
 import com.scs.web.blog.domain.vo.ArticleVo;
-import com.scs.web.blog.entity.Article;
 import com.scs.web.blog.factory.DaoFactory;
 import com.scs.web.blog.service.ArticleService;
 import com.scs.web.blog.util.Result;
@@ -11,11 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName ArticleServiceImpl
  * @Description TODO
  * @Date 22:49 2019/11/11
@@ -23,6 +22,7 @@ import java.util.List;
  **/
 public class ArticleServiceImpl implements ArticleService {
     private ArticleDao articleDao = DaoFactory.getArticleDaoInstance();
+    private LikeDao likeDao = DaoFactory.getLikeDaoInstance();
     private static Logger logger = LoggerFactory.getLogger(ArticleServiceImpl.class);
 
     @Override
@@ -70,21 +70,6 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
-
-    @Override
-    public Result batchDelete(long id) {
-        int n =0 ;
-        try {
-            n = articleDao.batchDelete(id);
-        } catch (SQLException e) {
-            logger.error("根据id删除文章出现异常");
-        }
-        if (n != 0) {
-            return Result.success(n);
-        } else {
-            return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
-        }
-    }
     @Override
     public Result selectByKeywords(String keywords) {
         List<ArticleVo> articleVoList = null;
@@ -101,19 +86,59 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public Result Write(Article article) {
-        int n = 0;
+    public Result addByArticleAndUser(long article_id, long user_id) {
+        Boolean suucess = new Boolean("false") ;
         try {
-            article.setCreateTime(LocalDateTime.now());
-            n = articleDao.insert(article);
-
-            System.out.println();
+            suucess = likeDao.addByArticleAndUser(article_id , user_id);
         } catch (SQLException e) {
-            logger.error("文章发布失败");
+            logger.error("添加喜欢");
         }
-        if(n != 0){
-            return Result.success(n);
+        if (suucess) {
+            return Result.success(suucess);
+        } else {
+            return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
         }
-        return Result.failure(ResultCode.ARTICLE_WRITER_FAIL);
+    }
+
+    @Override
+    public Result deleteByArticleAndUser(long article_id, long user_id) {
+        Boolean suucess = new Boolean("false") ;
+        try {
+            suucess = likeDao.deleteByArticleAndUser(article_id , user_id);
+
+        } catch (SQLException e) {
+            logger.error("删除喜欢");
+        }
+        if (suucess) {
+            return Result.success(suucess);
+        } else {
+            return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
+        }
+    }
+
+    @Override
+    public Result selectByArticleAndUser(long article_id, long user_id) {
+        Boolean suucess = new Boolean("false") ;
+        try {
+            suucess = likeDao.selectByArticleAndUser(article_id , user_id);
+        } catch (SQLException e) {
+            logger.error("查询喜欢");
+        }
+        if (suucess) {
+            return Result.success(suucess);
+        } else {
+            return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
+        }
+    }
+
+    @Override
+    public void addArticle(int userId, int topicId, String title, String summary, String thumbnail, String content) {
+        articleDao.addArticle(userId, topicId, title, summary, thumbnail, content);
+    }
+
+    @Override
+    public Result deleteArticle(Long article, long userid) throws SQLException {
+        boolean art = articleDao.deleteArticle(article , userid);
+        return Result.success(art);
     }
 }

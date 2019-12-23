@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 /**
  * @ClassName ThreadPoolManager
  * @Description 线程池管理
- * @Author xiaotaoqi
+ * @Author mq_xu
  * @Date 2019/11/27
  **/
 public class ThreadPoolManager {

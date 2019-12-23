@@ -1,9 +1,12 @@
 package com.scs.web.blog.service;
 
+import com.scs.web.blog.entity.Topic;
 import com.scs.web.blog.util.Result;
 
+import java.util.List;
+
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName TopicService
  * @Description TODO
  * @Date 20:07 2019/11/16
@@ -41,4 +44,6 @@ public interface TopicService {
      * @return
      */
     Result selectByPage(int currentPage, int count);
+
+    List<Topic> getTopicList();
 }

@@ -1,17 +1,17 @@
 package com.scs.web.blog.dao;
 
-import com.scs.web.blog.domain.dto.UserDto;
 import com.scs.web.blog.domain.vo.UserVo;
 import com.scs.web.blog.entity.User;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
- * @author xiaotaoqi
+ * @author mq_xu
  * @ClassName UserDao
  * @Description UserDao数据访问对象接口
- * @Date 10:54 2019/11/9
+ * @Date 2019/11/9
  * @Version 1.0
  **/
 public interface UserDao {
@@ -21,15 +21,7 @@ public interface UserDao {
      * @param user
      * @throws SQLException
      */
-    void insert(UserDto userDto) throws SQLException;
-
-    /**
-     * 修改用户资料
-     * @param userList
-     * @throws SQLException
-     * @return
-     */
-    int update(UserDto userDto) throws SQLException;
+    void insert(User user) throws SQLException;
 
     /**
      * 批量新增用户
@@ -57,11 +49,10 @@ public interface UserDao {
     List<User> selectHotUsers() throws SQLException;
 
 
-
-
     /**
      * 查询分页用户
-     *
+     * @param currentPage
+     * @param count
      * @return
      * @throws SQLException
      */
@@ -85,12 +76,49 @@ public interface UserDao {
     List<User> selectByKeywords(String keywords) throws SQLException;
 
     /**
-     * 关注用户
-     * @param keywords
+     * 根据用户id 获取用户
+     * @param id
      * @return
-     * @throws SQLException
      */
-    int follow(long id, int iscare) throws SQLException;
+    User findUserById(Long id) throws SQLException;
+
+    /**
+     * 更新用户信息
+     * @param avatar
+     * @param nickname
+     * @param mobile
+     * @param md5Hex
+     * @param gender
+     * @param birthday
+     * @param introduction
+     */
+    boolean updateInfo(int userId, String avatar, String nickname, String mobile, String md5Hex, String gender, LocalDate birthday, String introduction);
+
+    /**
+     *
+     * @param f_userId
+     * @param t_userId
+     * @return
+     */
+    boolean addUserFans(long f_userId, long t_userId) throws SQLException;
+
+    /**
+     *
+     * @param f_userId
+     * @param t_userId
+     * @return
+     */
+    boolean deleteUserFans(long f_userId, long t_userId) throws SQLException;
+
+    /**
+     *
+     * @param f_userId
+     * @param t_userId
+     * @return
+     */
+    int selectUserFans(long f_userId, long t_userId) throws SQLException;
 
 
+
+    void updateAvatar(int userId, String avatar);
 }
